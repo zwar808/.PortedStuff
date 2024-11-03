@@ -1,0 +1,1105 @@
+--[[
+
+New gui2lua plugin i am using for now
+
+]]
+
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+
+-- Instances: 58 | Scripts: 14 | Modules: 0 | Tags: 0
+local G2L = {};
+
+-- StarterGui.Xeno_Core
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["IgnoreGuiInset"] = true;
+G2L["1"]["DisplayOrder"] = 1000000003;
+G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
+G2L["1"]["Name"] = [[Xeno_Core]];
+
+
+-- StarterGui.Xeno_Core.UIPadding
+G2L["2"] = Instance.new("UIPadding", G2L["1"]);
+
+
+
+-- StarterGui.Xeno_Core.theme_acrylic
+G2L["3"] = Instance.new("BoolValue", G2L["1"]);
+G2L["3"]["Name"] = [[theme_acrylic]];
+
+
+-- StarterGui.Xeno_Core.theme_acrylic.LocalScript
+G2L["4"] = Instance.new("LocalScript", G2L["3"]);
+G2L["4"]["Enabled"] = false;
+G2L["4"]["Disabled"] = true;
+
+
+-- StarterGui.Xeno_Core.theme_acrylic.LocalScript2
+G2L["5"] = Instance.new("LocalScript", G2L["3"]);
+G2L["5"]["Name"] = [[LocalScript2]];
+
+
+-- StarterGui.Xeno_Core.Frame1
+G2L["6"] = Instance.new("Frame", G2L["1"]);
+G2L["6"]["ZIndex"] = 2;
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(30, 30, 30);
+G2L["6"]["Size"] = UDim2.new(0, 278, 0, 104);
+G2L["6"]["Position"] = UDim2.new(0.39768, 0, 0.39723, 0);
+G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Name"] = [[Frame1]];
+G2L["6"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.Xeno_Core.Frame1.TextLabel
+G2L["7"] = Instance.new("TextLabel", G2L["6"]);
+G2L["7"]["TextWrapped"] = true;
+G2L["7"]["ZIndex"] = 123;
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["TextTransparency"] = 1;
+G2L["7"]["TextScaled"] = true;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["TextSize"] = 14;
+G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["BackgroundTransparency"] = 1;
+G2L["7"]["RichText"] = true;
+G2L["7"]["Size"] = UDim2.new(0, 182, 0, 18);
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["Text"] = [[checking environment]];
+G2L["7"]["Position"] = UDim2.new(0.18283, 0, 0.30089, 0);
+
+
+-- StarterGui.Xeno_Core.Frame1.TextLabel.UIPadding
+G2L["8"] = Instance.new("UIPadding", G2L["7"]);
+
+
+
+-- StarterGui.Xeno_Core.Frame1.TextLabel.UIFlexItem
+G2L["9"] = Instance.new("UIFlexItem", G2L["7"]);
+
+
+
+-- StarterGui.Xeno_Core.Frame1.TextLabel.UIGradient
+G2L["a"] = Instance.new("UIGradient", G2L["7"]);
+G2L["a"]["Rotation"] = -90;
+G2L["a"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 252, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(218, 255, 255))};
+
+
+-- StarterGui.Xeno_Core.Frame1.ImageLabel
+G2L["b"] = Instance.new("ImageLabel", G2L["6"]);
+G2L["b"]["ZIndex"] = 123123;
+G2L["b"]["BorderSizePixel"] = 0;
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b"]["ScaleType"] = Enum.ScaleType.Crop;
+G2L["b"]["Image"] = [[rbxassetid://98268138041271]];
+G2L["b"]["Size"] = UDim2.new(0, 155, 0, 125);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["BackgroundTransparency"] = 1;
+G2L["b"]["Rotation"] = -16;
+G2L["b"]["Position"] = UDim2.new(0.23179, 0, -0.20978, 0);
+
+
+-- StarterGui.Xeno_Core.Frame1.ImageLabel.UIPadding
+G2L["c"] = Instance.new("UIPadding", G2L["b"]);
+
+
+
+-- StarterGui.Xeno_Core.Frame1.ImageLabel.UIFlexItem
+G2L["d"] = Instance.new("UIFlexItem", G2L["b"]);
+
+
+
+-- StarterGui.Xeno_Core.Frame1.ImageLabel.LocalScript
+G2L["e"] = Instance.new("LocalScript", G2L["b"]);
+
+
+
+-- StarterGui.Xeno_Core.Frame1.UICorner
+G2L["f"] = Instance.new("UICorner", G2L["6"]);
+G2L["f"]["CornerRadius"] = UDim.new(30, 30);
+
+
+-- StarterGui.Xeno_Core.Frame1.UIPadding
+G2L["10"] = Instance.new("UIPadding", G2L["6"]);
+
+
+
+-- StarterGui.Xeno_Core.Frame1.UISizeConstraint
+G2L["11"] = Instance.new("UISizeConstraint", G2L["6"]);
+
+
+
+-- StarterGui.Xeno_Core.Frame1.Sodium
+G2L["12"] = Instance.new("LocalScript", G2L["6"]);
+G2L["12"]["Name"] = [[Sodium]];
+
+
+-- StarterGui.Xeno_Core.Frame
+G2L["13"] = Instance.new("Frame", G2L["1"]);
+G2L["13"]["Visible"] = false;
+G2L["13"]["BorderSizePixel"] = 0;
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(10, 10, 10);
+G2L["13"]["Size"] = UDim2.new(0, 549, 0, 290);
+G2L["13"]["Position"] = UDim2.new(0.29774, 0, 0.25923, 0);
+G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.Xeno_Core.Frame.TextLabel
+G2L["14"] = Instance.new("TextLabel", G2L["13"]);
+G2L["14"]["TextWrapped"] = true;
+G2L["14"]["BorderSizePixel"] = 0;
+G2L["14"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["14"]["TextScaled"] = true;
+G2L["14"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["14"]["TextSize"] = 14;
+G2L["14"]["FontFace"] = Font.new([[rbxassetid://16658221428]], Enum.FontWeight.ExtraBold, Enum.FontStyle.Normal);
+G2L["14"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["14"]["BackgroundTransparency"] = 1;
+G2L["14"]["RichText"] = true;
+G2L["14"]["Size"] = UDim2.new(0, 200, 0, 23);
+G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14"]["Text"] = [[Xeno]];
+G2L["14"]["Position"] = UDim2.new(0.10747, 0, 0.02759, 0);
+
+
+-- StarterGui.Xeno_Core.Frame.debug
+G2L["15"] = Instance.new("TextLabel", G2L["13"]);
+G2L["15"]["TextWrapped"] = true;
+G2L["15"]["ZIndex"] = 2;
+G2L["15"]["BorderSizePixel"] = 0;
+G2L["15"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["15"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["TextSize"] = 14;
+G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["15"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["BackgroundTransparency"] = 1;
+G2L["15"]["RichText"] = true;
+G2L["15"]["Size"] = UDim2.new(0, 511, 0, 200);
+G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["Text"] = [[debug panel]];
+G2L["15"]["Name"] = [[debug]];
+G2L["15"]["Position"] = UDim2.new(0.027, 0, 0.145, 0);
+
+
+-- StarterGui.Xeno_Core.Frame.ImageLabel
+G2L["16"] = Instance.new("ImageLabel", G2L["13"]);
+G2L["16"]["BorderSizePixel"] = 0;
+G2L["16"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["16"]["ScaleType"] = Enum.ScaleType.Crop;
+G2L["16"]["Image"] = [[rbxassetid://98268138041271]];
+G2L["16"]["Size"] = UDim2.new(0, 83, 0, 86);
+G2L["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["16"]["BackgroundTransparency"] = 1;
+G2L["16"]["Position"] = UDim2.new(-0.01821, 0, -0.08276, 0);
+
+
+-- StarterGui.Xeno_Core.Frame.TextBox
+G2L["17"] = Instance.new("TextBox", G2L["13"]);
+G2L["17"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["17"]["BorderSizePixel"] = 0;
+G2L["17"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["17"]["TextWrapped"] = true;
+G2L["17"]["TextTransparency"] = 1;
+G2L["17"]["TextSize"] = 14;
+G2L["17"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["17"]["BackgroundColor3"] = Color3.fromRGB(5, 0, 8);
+G2L["17"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["17"]["RichText"] = true;
+G2L["17"]["MultiLine"] = true;
+G2L["17"]["ClearTextOnFocus"] = false;
+G2L["17"]["Size"] = UDim2.new(0, 511, 0, 200);
+G2L["17"]["Position"] = UDim2.new(0.02732, 0, 0.14483, 0);
+G2L["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["17"]["Text"] = [[]];
+
+
+-- StarterGui.Xeno_Core.Frame.TextBox.UIPadding
+G2L["18"] = Instance.new("UIPadding", G2L["17"]);
+
+
+
+-- StarterGui.Xeno_Core.Frame.TextBox.LocalScript
+G2L["19"] = Instance.new("LocalScript", G2L["17"]);
+
+
+
+-- StarterGui.Xeno_Core.Frame.TextBox.UICorner
+G2L["1a"] = Instance.new("UICorner", G2L["17"]);
+G2L["1a"]["CornerRadius"] = UDim.new(0, 4);
+
+
+-- StarterGui.Xeno_Core.Frame.UIPadding
+G2L["1b"] = Instance.new("UIPadding", G2L["13"]);
+
+
+
+-- StarterGui.Xeno_Core.Frame.Clients
+G2L["1c"] = Instance.new("ImageButton", G2L["13"]);
+G2L["1c"]["BorderSizePixel"] = 0;
+G2L["1c"]["ScaleType"] = Enum.ScaleType.Fit;
+G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1c"]["Image"] = [[rbxassetid://16884179279]];
+G2L["1c"]["ImageRectSize"] = Vector2.new(48, 48);
+G2L["1c"]["Size"] = UDim2.new(0, 22, 0, 24);
+G2L["1c"]["BackgroundTransparency"] = 1;
+G2L["1c"]["Name"] = [[Clients]];
+G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1c"]["ImageRectOffset"] = Vector2.new(690, 952);
+G2L["1c"]["Position"] = UDim2.new(0.85428, 0, 0.87241, 0);
+
+
+-- StarterGui.Xeno_Core.Frame.Clients.LocalScript
+G2L["1d"] = Instance.new("LocalScript", G2L["1c"]);
+
+
+
+-- StarterGui.Xeno_Core.Frame.Execute
+G2L["1e"] = Instance.new("ImageButton", G2L["13"]);
+G2L["1e"]["BorderSizePixel"] = 0;
+G2L["1e"]["ScaleType"] = Enum.ScaleType.Crop;
+G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1e"]["Image"] = [[rbxassetid://16167590360]];
+G2L["1e"]["ImageRectSize"] = Vector2.new(36, 36);
+G2L["1e"]["Size"] = UDim2.new(0, 24, 0, 35);
+G2L["1e"]["BackgroundTransparency"] = 1;
+G2L["1e"]["Name"] = [[Execute]];
+G2L["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1e"]["ImageRectOffset"] = Vector2.new(233, 454);
+G2L["1e"]["Position"] = UDim2.new(0.92896, 0, 0.85517, 0);
+
+
+-- StarterGui.Xeno_Core.Frame.Execute.LocalScript
+G2L["1f"] = Instance.new("LocalScript", G2L["1e"]);
+
+
+
+-- StarterGui.Xeno_Core.Frame.open
+G2L["20"] = Instance.new("Frame", G2L["13"]);
+G2L["20"]["Visible"] = false;
+G2L["20"]["BorderSizePixel"] = 0;
+G2L["20"]["BackgroundColor3"] = Color3.fromRGB(10, 10, 10);
+G2L["20"]["Size"] = UDim2.new(0, 110, 0, 131);
+G2L["20"]["Position"] = UDim2.new(0.79964, 0, 0.37931, 0);
+G2L["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["20"]["Name"] = [[open]];
+
+
+-- StarterGui.Xeno_Core.Frame.open.UICorner
+G2L["21"] = Instance.new("UICorner", G2L["20"]);
+
+
+
+-- StarterGui.Xeno_Core.Frame.open.TextLabel
+G2L["22"] = Instance.new("TextLabel", G2L["20"]);
+G2L["22"]["TextWrapped"] = true;
+G2L["22"]["BorderSizePixel"] = 0;
+G2L["22"]["TextScaled"] = true;
+G2L["22"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["22"]["TextSize"] = 14;
+G2L["22"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["22"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["22"]["BackgroundTransparency"] = 1;
+G2L["22"]["RichText"] = true;
+G2L["22"]["Size"] = UDim2.new(0, 103, 0, 18);
+G2L["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22"]["Text"] = [[clients]];
+
+
+-- StarterGui.Xeno_Core.Frame.open.ImageLabel
+G2L["23"] = Instance.new("ImageLabel", G2L["20"]);
+G2L["23"]["BorderSizePixel"] = 0;
+G2L["23"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["23"]["ScaleType"] = Enum.ScaleType.Fit;
+G2L["23"]["Image"] = [[rbxassetid://10734909540]];
+G2L["23"]["Size"] = UDim2.new(0, 21, 0, 17);
+G2L["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["23"]["BackgroundTransparency"] = 1;
+G2L["23"]["Position"] = UDim2.new(0.08178, 0, 0.20732, 0);
+
+
+-- StarterGui.Xeno_Core.Frame.open.TextLabel
+G2L["24"] = Instance.new("TextLabel", G2L["20"]);
+G2L["24"]["TextWrapped"] = true;
+G2L["24"]["BorderSizePixel"] = 0;
+G2L["24"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["24"]["TextScaled"] = true;
+G2L["24"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24"]["TextSize"] = 14;
+G2L["24"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["24"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24"]["BackgroundTransparency"] = 1;
+G2L["24"]["RichText"] = true;
+G2L["24"]["Size"] = UDim2.new(0, 71, 0, 10);
+G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24"]["Text"] = [[clients]];
+G2L["24"]["Position"] = UDim2.new(0.29091, 0, 0.22901, 0);
+
+
+-- StarterGui.Xeno_Core.Frame.open.TextLabel.LocalScript
+G2L["25"] = Instance.new("LocalScript", G2L["24"]);
+
+
+
+-- StarterGui.Xeno_Core.Frame.open.UIPadding
+G2L["26"] = Instance.new("UIPadding", G2L["20"]);
+
+
+
+-- StarterGui.Xeno_Core.Frame.Settings
+G2L["27"] = Instance.new("ImageButton", G2L["13"]);
+G2L["27"]["Interactable"] = false;
+G2L["27"]["BorderSizePixel"] = 0;
+G2L["27"]["ScaleType"] = Enum.ScaleType.Fit;
+G2L["27"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["27"]["ImageColor3"] = Color3.fromRGB(46, 46, 46);
+G2L["27"]["ZIndex"] = 6;
+G2L["27"]["Image"] = [[rbxassetid://16884179038]];
+G2L["27"]["ImageRectSize"] = Vector2.new(108, 108);
+G2L["27"]["Size"] = UDim2.new(0, 30, 0, 24);
+G2L["27"]["BackgroundTransparency"] = 1;
+G2L["27"]["Name"] = [[Settings]];
+G2L["27"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["27"]["ImageRectOffset"] = Vector2.new(578, 550);
+G2L["27"]["Position"] = UDim2.new(0.91803, 0, 0.02759, 0);
+
+
+-- StarterGui.Xeno_Core.Frame.Settings.LocalScript
+G2L["28"] = Instance.new("LocalScript", G2L["27"]);
+
+
+
+-- StarterGui.Xeno_Core.Frame.open2
+G2L["29"] = Instance.new("Frame", G2L["13"]);
+G2L["29"]["Visible"] = false;
+G2L["29"]["BorderSizePixel"] = 0;
+G2L["29"]["BackgroundColor3"] = Color3.fromRGB(10, 10, 10);
+G2L["29"]["Size"] = UDim2.new(0, 196, 0, 289);
+G2L["29"]["Position"] = UDim2.new(1.01639, 0, 0, 0);
+G2L["29"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["29"]["Name"] = [[open2]];
+
+
+-- StarterGui.Xeno_Core.Frame.open2.UICorner
+G2L["2a"] = Instance.new("UICorner", G2L["29"]);
+
+
+
+-- StarterGui.Xeno_Core.Frame.open2.TextLabel
+G2L["2b"] = Instance.new("TextLabel", G2L["29"]);
+G2L["2b"]["TextWrapped"] = true;
+G2L["2b"]["BorderSizePixel"] = 0;
+G2L["2b"]["TextScaled"] = true;
+G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2b"]["TextSize"] = 14;
+G2L["2b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2b"]["BackgroundTransparency"] = 1;
+G2L["2b"]["RichText"] = true;
+G2L["2b"]["Size"] = UDim2.new(0, 103, 0, 18);
+G2L["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2b"]["Text"] = [[settings]];
+G2L["2b"]["Position"] = UDim2.new(0.23469, 0, 0, 0);
+
+
+-- StarterGui.Xeno_Core.Frame.open2.TextLabel
+G2L["2c"] = Instance.new("TextLabel", G2L["29"]);
+G2L["2c"]["TextWrapped"] = true;
+G2L["2c"]["BorderSizePixel"] = 0;
+G2L["2c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["2c"]["TextScaled"] = true;
+G2L["2c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2c"]["TextSize"] = 14;
+G2L["2c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2c"]["BackgroundTransparency"] = 1;
+G2L["2c"]["RichText"] = true;
+G2L["2c"]["Size"] = UDim2.new(0, 115, 0, 22);
+G2L["2c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2c"]["Text"] = [[acrylic theme]];
+G2L["2c"]["Position"] = UDim2.new(0.22968, 0, 0.13841, 0);
+
+
+-- StarterGui.Xeno_Core.Frame.open2.TextLabel.LocalScript
+G2L["2d"] = Instance.new("LocalScript", G2L["2c"]);
+G2L["2d"]["Enabled"] = false;
+G2L["2d"]["Disabled"] = true;
+
+
+-- StarterGui.Xeno_Core.Frame.open2.UIPadding
+G2L["2e"] = Instance.new("UIPadding", G2L["29"]);
+
+
+
+-- StarterGui.Xeno_Core.Frame.open2.e1
+G2L["2f"] = Instance.new("ImageButton", G2L["29"]);
+G2L["2f"]["SliceCenter"] = Rect.new(39, 39, 39, 39);
+G2L["2f"]["ScaleType"] = Enum.ScaleType.Slice;
+G2L["2f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2f"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["2f"]["Image"] = [[rbxassetid://10791861382]];
+G2L["2f"]["ImageRectSize"] = Vector2.new(78, 78);
+G2L["2f"]["Size"] = UDim2.new(0.33173, 0, 0.11073, 0);
+G2L["2f"]["BackgroundTransparency"] = 1;
+G2L["2f"]["Name"] = [[e1]];
+G2L["2f"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["2f"]["ImageRectOffset"] = Vector2.new(904, 438);
+G2L["2f"]["Position"] = UDim2.new(0.28831, 0, 0.31834, 0);
+
+
+-- StarterGui.Xeno_Core.Frame.open2.e1.TextLabel
+G2L["30"] = Instance.new("TextLabel", G2L["2f"]);
+G2L["30"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["30"]["TextSize"] = 20;
+G2L["30"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["30"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["30"]["BackgroundTransparency"] = 1;
+G2L["30"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["30"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["30"]["Text"] = [[on]];
+G2L["30"]["Position"] = UDim2.new(-0.01923, 0, -0, 0);
+
+
+-- StarterGui.Xeno_Core.Frame.open2.e1.UIPadding
+G2L["31"] = Instance.new("UIPadding", G2L["2f"]);
+G2L["31"]["PaddingTop"] = UDim.new(0.2, 0);
+G2L["31"]["PaddingRight"] = UDim.new(0.1, 0);
+G2L["31"]["PaddingLeft"] = UDim.new(0.1, 0);
+G2L["31"]["PaddingBottom"] = UDim.new(0.2, 0);
+
+
+-- StarterGui.Xeno_Core.Frame.open2.e1.LocalScript
+G2L["32"] = Instance.new("LocalScript", G2L["2f"]);
+
+
+
+-- StarterGui.Xeno_Core.Frame.open2.e2
+G2L["33"] = Instance.new("ImageButton", G2L["29"]);
+G2L["33"]["Interactable"] = false;
+G2L["33"]["SliceCenter"] = Rect.new(39, 39, 39, 39);
+G2L["33"]["ScaleType"] = Enum.ScaleType.Slice;
+G2L["33"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["33"]["ImageColor3"] = Color3.fromRGB(69, 69, 69);
+G2L["33"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["33"]["Image"] = [[rbxassetid://10791872163]];
+G2L["33"]["ImageRectSize"] = Vector2.new(78, 78);
+G2L["33"]["Size"] = UDim2.new(0.332, 0, 0.111, 0);
+G2L["33"]["BackgroundTransparency"] = 1;
+G2L["33"]["Name"] = [[e2]];
+G2L["33"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["33"]["ImageRectOffset"] = Vector2.new(922, 550);
+G2L["33"]["Position"] = UDim2.new(0.73469, 0, 0.32007, 0);
+
+
+-- StarterGui.Xeno_Core.Frame.open2.e2.TextLabel
+G2L["34"] = Instance.new("TextLabel", G2L["33"]);
+G2L["34"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["34"]["TextSize"] = 20;
+G2L["34"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["34"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["34"]["BackgroundTransparency"] = 1;
+G2L["34"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["34"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["34"]["Text"] = [[off]];
+
+
+-- StarterGui.Xeno_Core.Frame.open2.e2.UIPadding
+G2L["35"] = Instance.new("UIPadding", G2L["33"]);
+G2L["35"]["PaddingTop"] = UDim.new(0.2, 0);
+G2L["35"]["PaddingRight"] = UDim.new(0.1, 0);
+G2L["35"]["PaddingLeft"] = UDim.new(0.1, 0);
+G2L["35"]["PaddingBottom"] = UDim.new(0.2, 0);
+
+
+-- StarterGui.Xeno_Core.Frame.UIDrag
+G2L["36"] = Instance.new("LocalScript", G2L["13"]);
+G2L["36"]["Name"] = [[UIDrag]];
+
+
+-- StarterGui.Xeno_Core.Frame.UICorner
+G2L["37"] = Instance.new("UICorner", G2L["13"]);
+
+
+
+-- StarterGui.Xeno_Core.Frame.BlurCreator
+G2L["38"] = Instance.new("LocalScript", G2L["13"]);
+G2L["38"]["Enabled"] = false;
+G2L["38"]["Name"] = [[BlurCreator]];
+G2L["38"]["Disabled"] = true;
+
+
+-- StarterGui.Xeno_Core.Frame.line
+G2L["39"] = Instance.new("TextLabel", G2L["13"]);
+G2L["39"]["TextWrapped"] = true;
+G2L["39"]["ZIndex"] = 2;
+G2L["39"]["BorderSizePixel"] = 0;
+G2L["39"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["39"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["39"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["39"]["TextSize"] = 14;
+G2L["39"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["39"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["39"]["BackgroundTransparency"] = 1;
+G2L["39"]["RichText"] = true;
+G2L["39"]["Size"] = UDim2.new(0, -146, 0, 205);
+G2L["39"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["39"]["Text"] = [[]];
+G2L["39"]["Name"] = [[line]];
+G2L["39"]["Position"] = UDim2.new(0.02732, 0, 0.145, 0);
+
+
+-- StarterGui.Xeno_Core.LocalScript
+G2L["3a"] = Instance.new("LocalScript", G2L["1"]);
+
+
+
+-- StarterGui.Xeno_Core.theme_acrylic.LocalScript2
+local function C_5()
+local script = G2L["5"];
+	local TweenService = game:GetService("TweenService")
+	
+	function twui(element, property, goal, duration)
+		local tweenInfo = TweenInfo.new(duration, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut)
+		local tweenProperties = {}
+		tweenProperties[property] = goal
+	
+		local tween = TweenService:Create(element, tweenInfo, tweenProperties)
+		tween:Play()
+		return tween
+	end
+	script.Parent.LocalScript:GetPropertyChangedSignal("Enabled"):Connect(function(...: any)
+		if script.Parent.LocalScript.Enabled == false then
+			twui(script.Parent.Parent.Frame, "BackgroundTransparency", 0, 3)
+			twui(script.Parent.Parent.Frame.open, "BackgroundTransparency", 0, 3)
+			twui(script.Parent.Parent.Frame.open2, "BackgroundTransparency", 0, 3)
+			twui(script.Parent.Parent.Frame.TextBox, "BackgroundTransparency", 0,3)
+		end
+	end)
+end;
+task.spawn(C_5);
+-- StarterGui.Xeno_Core.Frame1.ImageLabel.LocalScript
+local function C_e()
+local script = G2L["e"];
+	local TweenService = game:GetService("TweenService")
+	local UFO = script.Parent
+	local originalPosition = UFO.Position
+	
+	-- Create the tween
+	local tweenInfo = TweenInfo.new(
+		3.2, -- Time to complete the tween
+		Enum.EasingStyle.Quint, -- Easing style
+		Enum.EasingDirection.InOut, -- Easing direction
+		-1, -- Number of times to repeat (-1 for infinite)
+		true -- Reverses the tween after completion
+	)
+	
+	local tween = TweenService:Create(UFO, tweenInfo, {Position = UDim2.new(originalPosition.X.Scale, originalPosition.X.Offset, originalPosition.Y.Scale + 0.1, originalPosition.Y.Offset)})
+	
+	-- Start the tween
+	tween:Play()
+	
+end;
+task.spawn(C_e);
+-- StarterGui.Xeno_Core.Frame1.Sodium
+local function C_12()
+local script = G2L["12"];
+	local Sodium = {} or "Useless thing"
+	local TweenService = game:GetService("TweenService")
+	
+	function twui(element, property, goal, duration)
+		local tweenInfo = TweenInfo.new(duration, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut)
+		local tweenProperties = {}
+		tweenProperties[property] = goal
+	
+		local tween = TweenService:Create(element, tweenInfo, tweenProperties)
+		tween:Play()
+		return tween
+	end
+	
+	function mychildren()
+		for _, i in ipairs(script.Parent:GetDescendants()) do
+			return i
+		end
+	end
+	
+	wait(2)
+	twui(script.Parent.TextLabel, "TextTransparency", 0, 2)
+	wait(0.007)
+	twui(script.Parent.TextLabel, "Position", UDim2.new(0.183, 0,0.811, 0), 3)
+	wait(6)
+	twui(script.Parent.TextLabel, "Position", UDim2.new(0.183, 0,0.301, 0), 3)
+	wait(0.3)
+	twui(script.Parent.TextLabel, "TextTransparency", 1, 2)
+	wait(1)
+	local gen = twui(script.Parent.ImageLabel, "ImageTransparency", 1, 2)
+	gen.Completed:Connect(function(playbackState: Enum.PlaybackState) 
+		script.Parent.Parent.Frame.Transparency = 0
+		script.Parent.Parent.Frame.Visible = true
+		script.Parent:Destroy()
+	end)
+end;
+task.spawn(C_12);
+-- StarterGui.Xeno_Core.Frame.TextBox.LocalScript
+local function C_19()
+local script = G2L["19"];
+			local highlighter = {}
+			local keywords = {
+				lua = {
+					"and", "break", "or", "else", "elseif", "if", "then", "until", "repeat", "while", "do", "for", "in", "end",
+					"local", "return", "function", "export"
+				},
+				rbx = {
+					"game", "workspace", "script", "math", "string", "table", "task", "wait", "select", "next", "Enum",
+					"error", "warn", "tick", "assert", "shared", "loadstring", "tonumber", "tostring", "type",
+					"typeof", "unpack", "print", "Instance", "CFrame", "Vector3", "Vector2", "Color3", "UDim", "UDim2", "Ray", "BrickColor",
+					"OverlapParams", "RaycastParams", "Axes", "Random", "Region3", "Rect", "TweenInfo",
+					"collectgarbage", "not", "utf8", "pcall", "xpcall", "_G", "setmetatable", "getmetatable", "os", "pairs", "ipairs"
+				},
+				operators = {
+					"#", "+", "-", "*", "%", "/", "^", "=", "~", "=", "<", ">", ",", ".", "(", ")", "{", "}", "[", "]", ";", ":", ">=", "<="
+				}
+			}
+			local colors = {
+				numbers = Color3.fromRGB(255, 149, 26),
+				boolean = Color3.fromRGB(255, 198, 0),
+				operator = Color3.fromRGB(204, 204, 204),
+				lua = Color3.fromRGB(132, 214, 219),
+				rbx = Color3.fromRGB(146, 180, 253),
+				str = Color3.fromRGB(56, 241, 87),
+				comment = Color3.fromRGB(103, 110, 149),
+				null = Color3.fromRGB(255, 175, 37),
+				call = Color3.fromRGB(130, 170, 255),
+				self_call = Color3.fromRGB(248, 98, 83),
+				local_color = Color3.fromRGB(248, 98, 83),
+				function_color = Color3.fromRGB(248, 98, 83),
+				self_color = Color3.fromRGB(248, 98, 83),
+				local_property = Color3.fromRGB(129, 222, 255),
+				identifyexecutor = Color3.fromRGB(241, 255, 87)
+			}
+	local sourceText = script.Parent.Text
+	local e = script.Parent.Parent.line.Text
+			local function createKeywordSet(keywords)
+				local keywordSet = {}
+				for _, keyword in ipairs(keywords) do
+					keywordSet[keyword] = true
+				end
+				return keywordSet
+			end
+	
+			local luaSet = createKeywordSet(keywords.lua)
+			local rbxSet = createKeywordSet(keywords.rbx)
+			local operatorsSet = createKeywordSet(keywords.operators)
+	
+			local function getHighlight(tokens, index)
+				local token = tokens[index]
+	
+				if colors[token .. "_color"] then
+					return colors[token .. "_color"]
+				end
+	
+				if tonumber(token) then
+					return colors.numbers
+				elseif token == "nil" then
+					return colors.null
+				elseif token:sub(1, 2) == "--" then
+					return colors.comment
+				elseif operatorsSet[token] then
+					return colors.operator
+				elseif luaSet[token] then
+					return colors.lua
+				elseif rbxSet[token] then
+					return colors.rbx
+				elseif token:sub(1, 1) == "\"" or token:sub(1, 1) == "\'" then
+					return colors.str
+				elseif token == "true" or token == "false" then
+					return colors.boolean
+				end
+	
+				if tokens[index + 1] == "(" then
+					if tokens[index - 1] == ":" then
+						return colors.self_call
+					end
+	
+					return colors.call
+				end
+	
+				if tokens[index - 1] == "." then
+					if tokens[index - 2] == "Enum" then
+						return colors.rbx
+					end
+	
+					return colors.local_property
+				end
+			end
+	
+			function highlighter.run(source)
+				local tokens = {}
+				local currentToken = ""
+				local inString = false
+				local inComment = false
+				local commentPersist = false
+				local lineNumbers = {}
+				local lineNumber = 1
+				table.insert(lineNumbers, lineNumber)
+	
+				-- Tokenizing with line number tracking
+				for i = 1, #source do
+					local character = source:sub(i, i)
+	
+					if inComment then
+						if character == "\n" and not commentPersist then
+							table.insert(tokens, currentToken)
+							table.insert(tokens, character)
+							table.insert(lineNumbers, lineNumber)
+							lineNumber = lineNumber + 1
+							currentToken = ""
+							inComment = false
+						elseif source:sub(i - 1, i) == "]]" and commentPersist then
+							currentToken ..= "]"
+							table.insert(tokens, currentToken)
+							table.insert(lineNumbers, lineNumber)
+							currentToken = ""
+							inComment = false
+							commentPersist = false
+						else
+							currentToken = currentToken .. character
+						end
+					elseif inString then
+						if character == inString and source:sub(i - 1, i - 1) ~= "\\" or character == "\n" then
+							currentToken = currentToken .. character
+							inString = false
+						else
+							currentToken = currentToken .. character
+						end
+					else
+						if source:sub(i, i + 1) == "--" then
+							table.insert(tokens, currentToken)
+							table.insert(lineNumbers, lineNumber)
+							currentToken = "-"
+							inComment = true
+							commentPersist = source:sub(i + 2, i + 3) == "[["
+						elseif character == "\"" or character == "\'" then
+							table.insert(tokens, currentToken)
+							table.insert(lineNumbers, lineNumber)
+							currentToken = character
+							inString = character
+						elseif operatorsSet[character] then
+							table.insert(tokens, currentToken)
+							table.insert(lineNumbers, lineNumber)
+							table.insert(tokens, character)
+							table.insert(lineNumbers, lineNumber)
+							currentToken = ""
+						elseif character:match("[%w_]") then
+							currentToken = currentToken .. character
+						else
+							table.insert(tokens, currentToken)
+							table.insert(lineNumbers, lineNumber)
+							table.insert(tokens, character)
+							table.insert(lineNumbers, lineNumber)
+							currentToken = ""
+						end
+					end
+				end
+	
+				table.insert(tokens, currentToken)
+				table.insert(lineNumbers, lineNumber)
+	
+				local highlighted = {}
+				local lineText = {}
+	
+		local lineNumber = 1
+		local lineNumberColor = "#808080" -- Define gray color for line numbers
+		table.insert(highlighted, string.format("<font color=\"%s\">1  </font> ", lineNumberColor)) -- Start with line number 1
+	
+		for i, token in ipairs(tokens) do
+			local highlight = getHighlight(tokens, i)
+			local syntax
+	
+			-- Wrap Lua and Roblox keywords in <b> tags for bold effect
+			if highlight then
+				if luaSet[token] or rbxSet[token] then
+					syntax = string.format("<font color=\"#%s\"><b>%s</b></font>", highlight:ToHex(), token:gsub("<", "&lt;"):gsub(">", "&gt;"))
+				else
+					syntax = string.format("<font color=\"#%s\">%s</font>", highlight:ToHex(), token:gsub("<", "&lt;"):gsub(">", "&gt;"))
+				end
+			else
+				syntax = token
+			end
+	
+			-- Insert line numbers at the start of each new line with gray color
+			if token == "\n" then
+				lineNumber = lineNumber + 1
+				table.insert(highlighted, string.format("\n<font color=\"%s\">%d  </font> ", lineNumberColor, lineNumber))
+			else
+				table.insert(highlighted, syntax)
+			end
+		end
+	
+	
+		local lineText = {} -- Start with line number 1
+		for i = 1, #sourceText:split("\n") do
+			table.insert(lineText, tostring(i)) -- Add each subsequent line number
+		end
+	
+	e = table.concat(lineText, "\n") -- Display line numbers in the line TextBox
+	
+	
+				return table.concat(highlighted)
+			end
+	
+			game["Run Service"].RenderStepped:Connect(function(deltaTime)
+		script.Parent.Parent.debug.Text = highlighter.run(script.Parent.Text)
+			end)
+	
+end;
+task.spawn(C_19);
+-- StarterGui.Xeno_Core.Frame.Clients.LocalScript
+local function C_1d()
+local script = G2L["1d"];
+	local toggle = true
+	script.Parent.MouseButton1Click:Connect(function(...)
+	if toggle == true then
+		script.Parent.Parent.open.Visible = true
+	else
+		script.Parent.Parent.open.Visible = false
+	end
+	toggle = not toggle
+	end)
+	
+end;
+task.spawn(C_1d);
+-- StarterGui.Xeno_Core.Frame.Execute.LocalScript
+local function C_1f()
+local script = G2L["1f"];
+	function best()
+		local librariesCode = [[
+	        loadstring(game:HttpGet("https://raw.githubusercontent.com/zwar808/BetterUNC/refs/heads/main/lib/Debug.lua"))()
+	        loadstring(game:HttpGet("https://raw.githubusercontent.com/zwar808/BetterUNC/refs/heads/main/lib/require.lua"))()
+	        
+	        function identifyexecutor()
+		return "XenoPort 1.89"
+	end
+	
+	function printidentity()
+		print("Current identity is 3")
+	end
+	
+	function export(data)
+	local num = math.random()
+		writefile("xeno_export.lua_" .. num, data)
+		print("Exported. Xeno_export.lua_" .. num)
+	end
+	    ]]
+	
+		local scriptToRun = script.Parent.Parent.TextBox.Text
+		return librariesCode .. scriptToRun
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local func, errorMsg = loadstring(best()) 
+		if not func then
+			local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua"))()
+			MessageBox.Show({
+				Position = UDim2.new(0.5, 0, 0.5, 0), 
+				Text = "Compiler Error", 
+				Description = errorMsg, 
+				MessageBoxIcon = "Warning", 
+				MessageBoxButtons = "OK", 
+				Result = function(res)
+					if res == "OK" then
+						print("xeno.compiler.warn: " .. errorMsg)
+					end
+				end
+			})
+			return
+		end
+	
+		local success, runErrorMsg = pcall(func)
+		if not success then
+			local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua"))()
+			MessageBox.Show({
+				Position = UDim2.new(0.5, 0, 0.5, 0), 
+				Text = "Runtime Error", 
+				Description = runErrorMsg, 
+				MessageBoxIcon = "Error", 
+				MessageBoxButtons = "OK", 
+				Result = function(res)
+					if res == "OK" then
+						print("xeno.compiler.runtime_error: " .. runErrorMsg)
+					end
+				end
+			})
+		end
+	end)
+	
+end;
+task.spawn(C_1f);
+-- StarterGui.Xeno_Core.Frame.open.TextLabel.LocalScript
+local function C_25()
+local script = G2L["25"];
+	local hs = game.HttpService
+	
+	local success, response = pcall(function()
+		return hs:JSONDecode(game:HttpGet("https://clientsettings.roblox.com/v1/client-version/WindowsPlayer"))
+	end)
+	
+	if success then
+		if response.clientVersionUpload then
+			script.Parent.Text = response.clientVersionUpload
+		else
+			warn("clientVersionUpload not found in the response.")
+		end
+	else
+		warn("Failed to get client version: " .. tostring(response))
+	end
+	
+end;
+task.spawn(C_25);
+-- StarterGui.Xeno_Core.Frame.Settings.LocalScript
+local function C_28()
+local script = G2L["28"];
+	local toggle = true
+	local Sodium = {} or "Useless thing"
+	local TweenService = game:GetService("TweenService")
+	
+	function twui(element, property, goal, duration)
+		local tweenInfo = TweenInfo.new(duration, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut)
+		local tweenProperties = {}
+		tweenProperties[property] = goal
+	
+		local tween = TweenService:Create(element, tweenInfo, tweenProperties)
+		tween:Play()
+		return tween
+	end
+	script.Parent.MouseButton1Click:Connect(function(...)
+	if toggle == true then
+		twui(script.Parent, "Rotation", 180, 3)
+		script.Parent.Parent.open2.Visible = true
+	else
+		twui(script.Parent, "Rotation", -180, 3)
+		script.Parent.Parent.open2.Visible = false
+	end
+	toggle = not toggle
+	end)
+	
+end;
+task.spawn(C_28);
+-- StarterGui.Xeno_Core.Frame.open2.e1.LocalScript
+local function C_32()
+local script = G2L["32"];
+	local state = true
+	script.Parent.MouseButton1Click:Connect(function()
+			script.Parent.Parent.Parent.Parent.theme_acrylic.LocalScript.Enabled = true
+			script.Parent.Parent.Parent.BlurCreator.Enabled = true
+			script.Parent.Interactable = false
+			script.Parent.ImageColor3 = Color3.new(0.423529, 0.423529, 0.423529)
+			script.Parent.Parent.e2.ImageColor3 = Color3.new(1, 1, 1)
+		script.Parent.Parent.e2.Interactable = true
+	end)
+	
+	script.Parent.Parent["e2"].MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.theme_acrylic.LocalScript.Enabled = false
+		script.Parent.Parent.Parent.BlurCreator.Enabled = false
+		game.Workspace.CurrentCamera:WaitForChild("BlurSnox", 9999):Destroy()
+		script.Parent.Interactable = true
+		script.Parent.ImageColor3 = Color3.new(1, 1, 1)
+		script.Parent.Parent.e2.ImageColor3 = Color3.new(0.423529, 0.423529, 0.423529)
+		script.Parent.Parent.e2.Interactable = false
+	end)
+	
+end;
+task.spawn(C_32);
+-- StarterGui.Xeno_Core.Frame.UIDrag
+local function C_36()
+local script = G2L["36"];
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end;
+task.spawn(C_36);
+-- StarterGui.Xeno_Core.LocalScript
+local function C_3a()
+local script = G2L["3a"];
+	function identifyexecutor()
+		return "XenoPort 1.89"
+	end
+	
+	function printidentity()
+		print("Current identity is 3")
+	end
+	
+	function rconsoleprint(message: string)
+		local G2L = {};
+	
+		-- StarterGui.ScreenGui
+		if game.CoreGui:WaitForChild("Xeno_Console") then
+			game.CoreGui:WaitForChild("Xeno_Console"):WaitForChild("console").Text = message;
+		end
+	
+		
+		G2L["1"] = Instance.new("ScreenGui", game:	GetService("CoreGui"));
+		G2L["1"]["IgnoreGuiInset"] = true;
+		G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
+		G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+		G2L["1"]["Name"] = "Xeno_Console"
+	
+		-- StarterGui.ScreenGui.console
+		G2L["2"] = Instance.new("TextLabel", G2L["1"]);
+		G2L["2"]["TextWrapped"] = true;
+		G2L["2"]["BorderSizePixel"] = 0;
+		G2L["2"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+		G2L["2"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+		G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+		G2L["2"]["TextSize"] = 14;
+		G2L["2"]["FontFace"] = Font.new([[rbxasset://fonts/families/Roboto.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+		G2L["2"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+		G2L["2"]["BackgroundTransparency"] = 1;
+		G2L["2"]["RichText"] = true;
+		G2L["2"]["Size"] = UDim2.new(0, 1357, 0, 241);
+		G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+		G2L["2"]["Text"] = message;
+		G2L["2"]["Name"] = [[console]];
+		G2L["2"]["Position"] = UDim2.new(0, 0, 0.52372, 0);
+	end
+end;
+task.spawn(C_3a);
+
+return G2L["1"], require;
